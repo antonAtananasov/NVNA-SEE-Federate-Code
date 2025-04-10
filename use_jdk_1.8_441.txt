@@ -1,0 +1,4 @@
+Portable: https://download.oracle.com/otn/java/jdk/8u441-b07/7ed26d28139143f38c58992680c214a5/jdk-8u441-windows-x64.zip
+Installer: https://download.oracle.com/otn/java/jdk/8u441-b07/7ed26d28139143f38c58992680c214a5/jdk-8u441-windows-x64.exe
+
+Instructions: https://docs.oracle.com/javase/8/docs/technotes/guides/install/windows_jdk_install.html#A1097936

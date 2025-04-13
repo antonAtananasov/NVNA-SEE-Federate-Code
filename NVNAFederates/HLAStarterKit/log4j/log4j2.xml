@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration status="warn" monitorInterval="50">
 	<Properties>
-		<Property name="filename">logs/LunerRoverLogs</Property>
+		<Property name="filename">logs/LunarRoverLog</Property>
 	</Properties>
 	<appenders>
 		<Console name="Console" target="SYSTEM_OUT">

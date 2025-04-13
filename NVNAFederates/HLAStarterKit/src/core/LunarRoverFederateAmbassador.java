@@ -8,5 +8,5 @@ public class LunarRoverFederateAmbassador extends SEEAbstractFederateAmbassador 
 		super();
 		
 	}
-	
+
 }

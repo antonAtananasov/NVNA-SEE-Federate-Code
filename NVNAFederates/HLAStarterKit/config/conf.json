@@ -3,7 +3,7 @@
   "crcHost" : "localhost",
   "crcPort" : 8989,
   "federateName" : "LunarRover",
-  "federateType" : "LunarRoverType",
+  "federateType" : "LunarRover",
   "federationName" : "SEE 2025",
   "fomDirectory" : "foms",
   "realtime" : false,

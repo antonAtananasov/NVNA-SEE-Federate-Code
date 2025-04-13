@@ -1,5 +1,3 @@
-package core;
-
 import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -7,6 +5,8 @@ import java.net.MalformedURLException;
 import org.codehaus.jackson.JsonParseException;
 import org.codehaus.jackson.map.JsonMappingException;
 
+import core.LunarRoverFederate;
+import core.LunarRoverFederateAmbassador;
 import hla.rti1516e.exceptions.AttributeNotDefined;
 import hla.rti1516e.exceptions.AttributeNotOwned;
 import hla.rti1516e.exceptions.CallNotAllowedFromWithinCallback;
@@ -40,14 +40,15 @@ import skf.exception.UpdateException;
 
 public class LunarRoverMain {
 
-	private static final File conf = new File("config/conf.json");
+	private static final File conf = new File("config/conf.json"); 
 	
 	public static void main(String[] args) throws JsonParseException, JsonMappingException, ConnectionFailed, InvalidLocalSettingsDesignator, UnsupportedCallbackModel, CallNotAllowedFromWithinCallback, RTIinternalError, CouldNotCreateLogicalTimeFactory, FederationExecutionDoesNotExist, InconsistentFDD, ErrorReadingFDD, CouldNotOpenFDD, SaveInProgress, RestoreInProgress, NotConnected, MalformedURLException, FederateNotExecutionMember, NameNotFound, InvalidObjectClassHandle, AttributeNotDefined, ObjectClassNotDefined, InstantiationException, IllegalAccessException, IllegalName, ObjectInstanceNameInUse, ObjectInstanceNameNotReserved, ObjectClassNotPublished, AttributeNotOwned, ObjectInstanceNotKnown, PublishException, UpdateException, IOException {
-		LunarRover lunarRover = new LunarRover("LunarRover", FrameType.MoonCentricFixed.toString(), "LunarRoverType", new Position(100.123, 200.456, 300.321));
+		LunarRover lunarRover = new LunarRover("LunarRover", FrameType.MoonCentricFixed.toString(), "LunarRover", new Position(0,0,0));
+		
 		LunarRoverFederateAmbassador ambassador = new LunarRoverFederateAmbassador();
-		LunarRoverFederate federate = new LunarRoverFederate (ambassador, lunarRover);
-
-		federate.configureAndStart(new ConfigurationFactory().importConfiguration(conf));	
-	} 
+		LunarRoverFederate federate = new LunarRoverFederate(ambassador, lunarRover);
+		
+		federate.configureAndStart(new ConfigurationFactory().importConfiguration(conf));
+	}
 
 }
